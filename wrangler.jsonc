@@ -18,7 +18,7 @@
 	"services": [
 		{
 			"binding": "WORKER_SELF_REFERENCE",
-			"service": "mailflare",
+			"service": "mailflare1",
 		},
 	],
 	"durable_objects": {
@@ -77,21 +77,21 @@
 		"producers": [
 			{
 				"binding": "INBOUND_QUEUE",
-				"queue": "mailflare-inbound",
+				"queue": "mailflare1-inbound",
 			},
 			{
 				"binding": "OUTBOUND_QUEUE",
-				"queue": "mailflare-outbound",
+				"queue": "mailflare1-outbound",
 			},
 		],
 		"consumers": [
 			{
-				"queue": "mailflare-inbound",
+				"queue": "mailflare1-inbound",
 				"max_batch_size": 5,
 				"max_retries": 3,
 			},
 			{
-				"queue": "mailflare-outbound",
+				"queue": "mailflare1-outbound",
 				"max_batch_size": 5,
 				"max_retries": 3,
 			},
